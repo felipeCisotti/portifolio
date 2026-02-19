@@ -71,4 +71,8 @@ background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(67, 9, 121, 1) 76%
   height: 100vh;
 }
 
-
+.pagina-2,
+.container{
+  display: flex;
+  
+}
