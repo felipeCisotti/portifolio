@@ -187,14 +187,12 @@ section {
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
+  border: 1px solid var(--glass-border);
   color: white;
-  box-shadow: 0 10px 20px rgba(124, 77, 255, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 25px rgba(124, 77, 255, 0.4);
 }
 
 /* About Section */
