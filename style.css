@@ -303,6 +303,7 @@ section {
 .section-header {
   margin-bottom: 60px;
   width: 100%;
+  text-align: center;
 }
 
 .section-header h2 {
@@ -311,6 +312,7 @@ section {
   color: #000000;
   font-weight: 500;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  
 }
 
 .projects-grid {
