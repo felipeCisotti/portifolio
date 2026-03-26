@@ -570,25 +570,124 @@ footer {
   animation: fadeInUp 0.8s ease forwards;
 }
 
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 9999;
+}
+
 /* Mobile Responsive */
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  nav .container {
+    padding: 10px 20px;
+  }
+
   nav .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease;
+    z-index: 998;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+  }
+
+  nav .nav-links.nav-active {
+    right: 0;
+  }
+
+  nav .nav-links li {
+    margin: 20px 0;
+  }
+
+  nav .nav-links a {
+    font-size: 1.5rem;
+    color: var(--text-main);
+  }
+
+  body.light-theme nav .nav-links {
+    background: rgba(255, 255, 255, 0.95);
   }
 
   .about-grid {
     grid-template-columns: 1fr;
   }
+  
+  .about-image.glass {
+    height: 300px !important;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
   .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
   }
+  
+  .contact-container {
+    padding: 30px !important;
+  }
+  
+  .social-media {
+    transform: scale(0.8);
+    margin-top: 20px;
+  }
+  
+  .hero-content div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero-content div .btn-primary {
+    margin: 0 !important;
+    text-align: center;
+  }
 }
 
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .social-media {
+    transform: scale(0.65);
+  }
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /* From Uiverse.io by RiccardoRapelli */ 
 .switch {
   position: relative;
